@@ -2,10 +2,9 @@
 # -*- coding: utf-8 -*-
 
 """
-Напишите программу, в которой имеется несколько объединенных
-в группу радиокнопок, индикатор которых выключен (indicatoron=0).
+Напишите программу, в которой имеется несколько кнопок, индикатор которых выключен (indicatoron=0).
 Если какая-нибудь кнопка включается, то в метке должна отображаться
-соответствующая ей информация. Обычных кнопок в окне быть не должно.
+соответствующая ей информация.
 """
 
 from PySide2.QtWidgets import QWidget, QApplication,\
@@ -22,11 +21,11 @@ class MainWindow(QWidget):
         self.label = QLabel()
         self.label.setAlignment(Qt.AlignCenter)
 
-        self.rbutton1 = QPushButton('Вася')
+        self.rbutton1 = QPushButton('Кнопка1')
         self.rbutton1.setCheckable(True)
-        self.rbutton2 = QPushButton('Петя')
+        self.rbutton2 = QPushButton('Кнопка2')
         self.rbutton2.setCheckable(True)
-        self.rbutton3 = QPushButton('Маша')
+        self.rbutton3 = QPushButton('Кнопка3')
         self.rbutton3.setCheckable(True)
 
         self.button_group = QButtonGroup()
@@ -51,9 +50,9 @@ class MainWindow(QWidget):
 
 if __name__ == "__main__":
     people = {
-        'Вася': '+79283457619',
-        'Петя': '+79059993409',
-        'Маша': '+79643482810'
+        'Кнопка1': 'Действительно 1',
+        'Кнопка2': 'Действительно 2',
+        'Кнопка3': 'Действительно 3'
     }
     app = QApplication(sys.argv)
     window = MainWindow()
